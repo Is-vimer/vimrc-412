@@ -34,7 +34,7 @@ call dein#add('https://github.com/preservim/nerdtree')
 call dein#add('https://github.com/jiangmiao/auto-pairs')
 call dein#add('https://github.com/vim-airline/vim-airline')
 call dein#add('https://github.com/tpope/vim-fugitive')
-"call dein#add('')
+call dein#add('https://github.com/yianwillis/vimcdoc')
 "call dein#add('')
 
 
