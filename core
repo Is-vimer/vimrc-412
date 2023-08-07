@@ -1,6 +1,7 @@
 vim9script
-if exsis("g:mapleader")
-        normeap <C-j> <C-w>j
+if !exists("g:mapleader")
+	g:mapleader = ' '
+        noremap  <C-j> <C-w>j
         noremap <C-k> <C-w>k
         noremap <C-h> <C-w>h
         noremap <C-l> <C-w>l
@@ -9,15 +10,17 @@ if exsis("g:mapleader")
         noremap <C-J> <C-w>J
         noremap <C-L> <C-w>L
 
-        def Wall_this_file()
-                wall!
-                source %
-        enddef
-        noreamp W <cmd>call Wall_this_file()<cr>
-
         noremap <Tab>w <cmd>tabnew<cr>
         noremap <Tab>h <cmd>tabnext<cr>
         noremap <Tab>l <cmd>tabproview<cr>
         noremap <Tab>q <cmd>tabclose<cr>
+
+	nnoremap <leader>fl <cmd>Leaderf line <cr>
+	nnoremap <leader>fm <cmd>Leaderf! mru<cr>
+	nnoremap <leader>fb <cmd>Leaderf! buffer <cr>
+	nnoremap <leader>F <cmd>Leaderf function<cr>
+	nnoremap <leader>ff <cmd>Leaderf file<cr>
+	nnoremap <leader>ft <cmd>Leaderf tag<cr>
+
 
 endif
