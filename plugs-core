@@ -1,67 +1,28 @@
 
-im9script
-  2         $git = "https://gitclone.com/github.com/"
-  3 
-  4         #检查是否存在plug-vim文件
-  5         if !isdirectory("~/.vim/vim-plug/")
-  6         else
-  7                 echo "不存在plug-vim文件夹"
-  8                 echo "现在下载"
-  9                 !sudo git clone https://gitclone.com/github.com/junegunn/vim
- 10         endif
- 11 
- 12         call plug#begin("~/.vim/plugged")
- 13                 Plug $git .. 'junegunn/vim-easy-align'
- 14                 Plug $git .. 'junegunn/vim-github-dashboard.git'
- 15                 Plug $git .. 'SirVer/ultisnips' | Plug $git .. 'honza/vim-snippets'
- 16                 Plug $git .. 'preservim/nerdtree', { 'on': 'NERDTreeToggle'}
- 17                 Plug $git .. 'Yggdroot/LeaderF.git', { 'do': ':LeaderfInstall'}
- 18                 Plug $git .. 'junegunn/goyo.vim', { 'for': 'markdown' }
- 19                 Plug $git .. 'tpope/vim-unimpaired'
- 20                 Plug $git .. 'jiangmiao/auto-pairs'
- 21                 Plug $git .. 'jszakmeister/markdown1ctags'
- 22                 Plug $git .. 'majutsushi/tagbar'
- 23                 # Plug $git .. 'tpope/vim-fugitive'
- 24                 Plug $git .. 'junegunn/gv.vim'
- 25                 Plug $git .. 'tpope/vim-commentary'
- 26                 Plug $git .. 'mg977/vim-visual-multi'
- 27                 Plug $git .. 'vim-airline/vim-airline'
- 28                 Plug $git .. 'vim-airline/vim-airline-themes'
- 29         call plug#end()
- 30 
- 31 #*****************   Tagbar   *************************************
- 32 #F4 开启和关闭
- 33 noremap <F4> :TagbarToggle<CR>
- 34 g:tagbar_type_markdown = {
- 35     \ 'ctagstype': 'markdown',
- 36     \ 'ctagsbin': '~/.vim/plugged/markdown2ctags/markdown2ctags.py',
- 37     \ 'ctagsargs': '-f - --sort=yes ',
- 38     \ 'kinds': [
- 39         \ 's:sections',
- 40         \ 'i:images'
- 41     \ ],
- 42     \ 'sro': '|',
- 43     \ 'kind2scope': {
- 44         \ 's': 'section',
- 45     \ },
- 46     \ 'sort': 0,
- 47 \ }
-f !exists("g:mapleader")
- 58         g:mapleader = ' '
- 59         set number
- 60         set nocompatible
- 61         color slate
- 62         set background=dark
- 63         syntax on
- 64         set termguicolors
- 65         set ruler
- 66         set nowrap
- 67         filetype plugin indent on
- 68         set cindent
- 69 
- 70         inoremap ( ()<esc>i
- 71         inoremap " ""<esc>i
- 72         inoremap ' ''<esc>i
- 73         finish
- 74 endif
+let $git = "https://gitclone.com/github.com/"
+#检查是否存在plug-vim文件
+if !isdirectory("~/.vim/vim-plug/")
+    echo "不存在plug-vim文件夹"
+    echo "现在下载"
+    !sudo git clone https://gitclone.com/github.com/junegunn/vim0
+endif
+call plug#begin("~/.vim/plugged")
+Plug $git .. 'junegunn/vim-easy-align'
+Plug $git .. 'junegunn/vim-github-dashboard.git'
+Plug $git .. 'SirVer/ultisnips' | Plug $git .. 'honza/vim-snippets'
+Plug $git .. 'preservim/nerdtree', { 'on': 'NERDTreeToggle'}
+Plug $git .. 'Yggdroot/LeaderF.git', { 'do': ':LeaderfInstall'}
+Plug $git .. 'junegunn/goyo.vim', { 'for': 'markdown' }
+Plug $git .. 'tpope/vim-unimpaired'
+Plug $git .. 'jiangmiao/auto-pairs'
+Plug $git .. 'jszakmeister/markdown1ctags'
+Plug $git .. 'majutsushi/tagbar'
+# Plug $git .. 'tpope/vim-fugitive'
+Plug $git .. 'junegunn/gv.vim'
+Plug $git .. 'tpope/vim-commentary'
+Plug $git .. 'mg977/vim-visual-multi'
+Plug $git .. 'vim-airline/vim-airline'
+Plug $git .. 'vim-airline/vim-airline-themes'
+call plug#end()
+
 
