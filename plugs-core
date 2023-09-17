@@ -13,9 +13,9 @@ im9script
  12         call plug#begin("~/.vim/plugged")
  13                 Plug $git .. 'junegunn/vim-easy-align'
  14                 Plug $git .. 'junegunn/vim-github-dashboard.git'
- 15                 Plug $git .. 'SirVer/ultisnips' | Plug $git .. 'honza/vim-sn
- 16                 Plug $git .. 'preservim/nerdtree', { 'on': 'NERDTreeToggle'
- 17                 Plug $git .. 'Yggdroot/LeaderF.git', { 'do': ':LeaderfInstal
+ 15                 Plug $git .. 'SirVer/ultisnips' | Plug $git .. 'honza/vim-snippets'
+ 16                 Plug $git .. 'preservim/nerdtree', { 'on': 'NERDTreeToggle'}
+ 17                 Plug $git .. 'Yggdroot/LeaderF.git', { 'do': ':LeaderfInstall'}
  18                 Plug $git .. 'junegunn/goyo.vim', { 'for': 'markdown' }
  19                 Plug $git .. 'tpope/vim-unimpaired'
  20                 Plug $git .. 'jiangmiao/auto-pairs'
