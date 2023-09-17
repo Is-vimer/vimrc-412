@@ -1,0 +1,36 @@
+" This's vim plugin maps file.
+color slate
+set lines=90
+set autoindent
+
+
+nnoremap <silent> <space>W :call W_run()<cr>
+	func W_run()
+		wall!
+		so $MYVIMRC
+	endfunc
+
+nnoremap <silent> W :call W_this_file_run()<cr>
+	func W_this_file_run()
+		w!
+		so %
+	endfunc
+
+
+inoremap <TAB> <C-n>
+inoremap <S-TAB> <C-p>
+nnoremap <Tab>w :tabnew<cr>
+nnoremap <Tab>j gt
+nnoremap <Tab>k gT
+nnoremap <Tab>q :tabclose<cr>
+
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+tnoremap <C-h> <C-w>h
+tnoremap <C-l> <C-w>l
+tnoremap <C-j> <C-w>j
+tnoremap <C-k> <C-w>k
+nnoremap <C-v> :vsplit<cr>
+nnoremap <C-s> :split<cr>
